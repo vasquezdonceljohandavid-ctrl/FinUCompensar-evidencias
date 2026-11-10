@@ -34,4 +34,10 @@ function formatearInforme(resultado) {
   ].join('\n');
 }
 
-module.exports = { MENSAJES, formatearInforme };
+const informe = { MENSAJES, formatearInforme };
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = informe;
+} else {
+  globalThis.FinInforme = informe;
+}

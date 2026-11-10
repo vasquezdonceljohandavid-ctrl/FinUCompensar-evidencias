@@ -39,12 +39,12 @@ Tipo de dato: R = real, S = simulado.
 |---|---|
 | Solicitante | Johan David Vásquez Doncel (director) |
 | Fecha de solicitud | 10/11/2026 |
-| Motivo | SPI 0,52 al corte; 212,5 h restantes en 3,7 semanas exigirían 57,2 h-equipo por semana (línea base: 22,5) |
-| Alternativas | A. Mantener el alcance y mover el cierre al 15/01/2027. B. Mantener alcance y fecha con más horas (inviable). C. Mantener la fecha y reducir el alcance |
+| Motivo | SPI 0,58 al corte; 194,9 h restantes en 3,7 semanas exigirían 52,5 h-equipo por semana (línea base: 22,5) |
+| Alternativas | A. Mantener el alcance y mover el cierre al 10/01/2027. B. Mantener alcance y fecha con más horas (inviable). C. Mantener la fecha y reducir el alcance |
 | Decisión | C. Aprobado por el equipo el 10/11/2026; escalado al patrocinador con el informe técnico |
 | Se mantiene | RF-01 (autenticación básica), RF-02 (un periodo), RF-04, RF-05, RF-06, RF-07, RS-01, RD-01, RNF-05 |
-| Se difiere | Despliegue en AWS (demo local + video), RF-08 historial multi-mes, RF-09 automatizado (procedimiento manual), wireframes de alta fidelidad |
+| Se difiere | Despliegue en AWS (demo web local + video), RF-08 historial multi-mes, RF-09 automatizado (procedimiento manual), wireframes de alta fidelidad |
 | No cambia | Exclusiones éticas, datos sintéticos, fecha de cierre 06/12/2026 |
-| Impacto | Tiempo: 0 días frente al 06/12. Esfuerzo replanificado: 106 h (28,5 h-equipo por semana). Caja proyectada: $30.722 |
-| Plan alterno | Si en el corte del 22/11 el avance es menor al 80 %, se entrega la PoC con demostración por consola y simulación técnica |
+| Impacto | Tiempo: 0 días frente al 06/12. Esfuerzo replanificado: 98 h (26,4 h-equipo por semana). Caja proyectada: $30.722 |
+| Plan alterno | Si en el corte del 22/11 el avance es menor al 80 %, se entrega la PoC con demostración web local sin cuentas y simulación técnica |
 | Línea base actualizada | Cronograma (revisión 1) y alcance del MVP, una vez avalado por el patrocinador |

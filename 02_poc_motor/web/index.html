@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FinUCompensar - Simulador educativo</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="barra">
+    <div class="marca">
+      <span class="logo">Fin<b>U</b></span>
+      <div>
+        <h1>FinUCompensar</h1>
+        <p>Simulador educativo: ¿qué le pasa a tu presupuesto si aceptas una nueva cuota?</p>
+      </div>
+    </div>
+    <span class="insignia" id="insignia">Prueba de concepto</span>
+  </header>
+
+  <main class="contenedor">
+    <section class="panel" aria-labelledby="t-datos">
+      <div class="encabezado-panel">
+        <h2 id="t-datos"><span class="paso">1</span> Tu mes</h2>
+        <label class="ejemplo">
+          Cargar ejemplo
+          <select id="selector-ejemplo">
+            <option value="">Elegir escenario...</option>
+          </select>
+        </label>
+      </div>
+      <p class="ayuda">Registra tus ingresos y egresos de un mes. Usa valores en pesos, sin puntos ni decimales.</p>
+
+      <div class="tabla-movimientos" role="table" aria-label="Movimientos del mes">
+        <div class="fila cabecera" role="row">
+          <span role="columnheader">Tipo</span>
+          <span role="columnheader">Concepto</span>
+          <span role="columnheader">Valor (COP)</span>
+          <span></span>
+        </div>
+        <div id="movimientos"></div>
+      </div>
+      <button type="button" class="boton secundario" id="agregar">+ Agregar movimiento</button>
+
+      <h2 class="separado"><span class="paso">2</span> Nueva obligación que estás evaluando</h2>
+      <div class="campos">
+        <label>Valor total del crédito
+          <input type="number" id="ob-valor" min="1" step="1" inputmode="numeric">
+        </label>
+        <label>Cuota mensual
+          <input type="number" id="ob-cuota" min="1" step="1" inputmode="numeric">
+        </label>
+        <label>Plazo (meses)
+          <input type="number" id="ob-plazo" min="1" step="1" inputmode="numeric">
+        </label>
+      </div>
+
+      <button type="button" class="boton principal" id="simular">Simular escenario</button>
+      <p class="error" id="error" role="alert" hidden></p>
+    </section>
+
+    <section class="panel" aria-labelledby="t-resultado" aria-live="polite">
+      <h2 id="t-resultado"><span class="paso">3</span> Informe comparativo</h2>
+      <div id="vacio" class="vacio">Completa tus datos y pulsa <b>Simular escenario</b>, o carga un ejemplo.</div>
+
+      <div id="resultado" hidden>
+        <div class="tarjetas">
+          <article class="tarjeta">
+            <h3>Margen actual</h3>
+            <p class="cifra" id="r-actual"></p>
+            <p class="nota">Lo que te queda hoy cada mes</p>
+          </article>
+          <article class="tarjeta" id="tarjeta-simulado">
+            <h3>Margen con la nueva cuota</h3>
+            <p class="cifra" id="r-simulado"></p>
+            <p class="nota" id="r-variacion"></p>
+          </article>
+        </div>
+
+        <h3 class="subtitulo">¿En qué se va tu ingreso?</h3>
+        <div class="barras">
+          <div class="barra-fila"><span>Hoy</span><div class="barra-uso" id="barra-actual"></div></div>
+          <div class="barra-fila"><span>Con la cuota</span><div class="barra-uso" id="barra-simulada"></div></div>
+        </div>
+        <ul class="leyenda">
+          <li><i class="c-gasto"></i>Gastos</li>
+          <li><i class="c-obligacion"></i>Obligaciones actuales</li>
+          <li><i class="c-ahorro"></i>Ahorro</li>
+          <li><i class="c-cuota"></i>Nueva cuota</li>
+          <li><i class="c-margen"></i>Margen libre</li>
+          <li><i class="c-deficit"></i>Faltante</li>
+        </ul>
+
+        <dl class="detalle">
+          <div><dt>Ingresos</dt><dd id="d-ingreso"></dd></div>
+          <div><dt>Gastos</dt><dd id="d-gasto"></dd></div>
+          <div><dt>Obligaciones actuales</dt><dd id="d-obligacion"></dd></div>
+          <div><dt>Ahorro programado</dt><dd id="d-ahorro"></dd></div>
+          <div><dt>Obligaciones / ingresos</dt><dd id="d-proporcion"></dd></div>
+        </dl>
+
+        <h3 class="subtitulo">Alertas educativas</h3>
+        <ul class="alertas" id="alertas"></ul>
+      </div>
+
+      <aside class="aviso" id="aviso"></aside>
+    </section>
+  </main>
+
+  <footer class="pie">
+    FinUCompensar · Gestión de Proyectos 2026-2 · UCompensar · Datos sintéticos, no se guarda información.
+  </footer>
+
+  <script src="../src/motor.js"></script>
+  <script src="../src/informe.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

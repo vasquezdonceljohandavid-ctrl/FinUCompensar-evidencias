@@ -98,7 +98,7 @@ function analizarEscenario({ movimientos, obligacionNueva }) {
   };
 }
 
-module.exports = {
+const motor = {
   VERSION_REGLAS,
   UMBRAL_MARGEN_ESTRECHO,
   AVISO_EDUCATIVO,
@@ -106,3 +106,10 @@ module.exports = {
   totalizar,
   analizarEscenario,
 };
+
+// El mismo archivo lo usan Node (pruebas y CLI) y el navegador (web/), para que ambos calculen con idénticas reglas.
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = motor;
+} else {
+  globalThis.FinMotor = motor;
+}

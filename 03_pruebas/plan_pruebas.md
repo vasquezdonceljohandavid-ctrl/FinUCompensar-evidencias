@@ -4,7 +4,7 @@ Versión: 1.0 | Fecha: 10/11/2026 | Responsable: Alejandro Forero Saavedra | Eje
 
 ## 1. Objetivo y alcance
 
-Verificar que el producto calcula correctamente (R04), no induce a interpretar el resultado como aprobación crediticia (R06), valida sus entradas y protege los datos. En esta versión se prueba el motor de cálculo (incremento 0); los casos de interfaz, seguridad e integración quedan definidos y pendientes de la versión web.
+Verificar que el producto calcula correctamente (R04), no induce a interpretar el resultado como aprobación crediticia (R06), valida sus entradas y protege los datos. En esta versión se prueba el motor de cálculo (incremento 0), que también usa la interfaz web local (incremento 1); los casos de seguridad, usabilidad con usuarios e integración quedan definidos y pendientes de la autenticación y la base de datos.
 
 ## 2. Ambiente y datos
 
@@ -26,11 +26,11 @@ Verificar que el producto calcula correctamente (R04), no induce a interpretar e
 | PF-01 a PF-06 | Funcional: doble descuento, inmutabilidad, sumas, versión, proporciones, división por cero | RF-02, RF-04, RF-06, RNF-05, RD-01 | Sí | Aprobados (6/6) |
 | PV-01 a PV-08 | Validación: negativos, decimales, tipos, cuota y plazo cero, estructura, texto | RF-02, RF-05 | Sí | Aprobados (8/8) |
 | PE-01 a PE-04 | Contenido educativo: aviso, sin campos de aprobación, mensajes, informe | RF-07 | Sí | Aprobados (4/4) |
-| PS-01 | Seguridad: contraseña con hash, nunca en texto plano | RF-01, RS-01 | Sí | Pendiente (versión web) |
-| PS-02 | Seguridad: una cuenta no accede a datos de otra | RD-01, RF-09 | Sí | Pendiente (versión web) |
-| PS-03 | Seguridad: secretos fuera de Git | RS-02 | Sí | Pendiente (versión web) |
+| PS-01 | Seguridad: contraseña con hash, nunca en texto plano | RF-01, RS-01 | Sí | Pendiente (requiere autenticación) |
+| PS-02 | Seguridad: una cuenta no accede a datos de otra | RD-01, RF-09 | Sí | Pendiente (requiere autenticación) |
+| PS-03 | Seguridad: secretos fuera de Git | RS-02 | Sí | Pendiente (requiere ambiente desplegado) |
 | PU-01 | Usabilidad: 4 de 5 usuarios explican el escenario sin ayuda | RNF-04, RF-07 | Sí | Pendiente (30/11 a 03/12) |
-| PU-02 | Usabilidad: flujo en computador y teléfono | RNF-01 | No | Pendiente |
+| PU-02 | Usabilidad: flujo en computador y teléfono | RNF-01 | No | Pendiente con usuarios; revisión visual preliminar a 1300 px y 390 px (`capturas/`) |
 | PI-01 | Integración: registro, simulación e informe de punta a punta | RF-03, RF-08 | Sí | Pendiente |
 
 ## 5. Protocolo de la prueba de usabilidad PU-01 (planificado)
@@ -42,4 +42,4 @@ Verificar que el producto calcula correctamente (R04), no induce a interpretar e
 
 ## 6. Resultados
 
-Ver `reporte_pruebas.txt` (formato spec), `reporte_pruebas.xml` (JUnit) y `salida_demo_escenarios.txt`. Defectos encontrados al construir la PoC: DEF-01 (codificación de archivos) y DEF-02 (ruta del ejecutor de pruebas), ambos cerrados el 10/11/2026.
+Ver `reporte_pruebas.txt` (formato spec), `reporte_pruebas.xml` (JUnit), `salida_demo_escenarios.txt` y las capturas de la interfaz web en `capturas/` (S01, S02 y S04 en escritorio; S03 en ancho de teléfono), cuyas cifras coinciden con la salida de consola. Defectos encontrados al construir la PoC: DEF-01 (codificación de archivos), DEF-02 (ruta del ejecutor de pruebas) y DEF-08 (codificación mixta al adaptar el motor al navegador), todos cerrados el 10/11/2026.
