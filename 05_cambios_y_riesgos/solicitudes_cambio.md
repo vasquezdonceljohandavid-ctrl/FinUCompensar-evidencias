@@ -11,7 +11,7 @@ Tipo de dato: R = real, S = simulado.
 | Campo | Detalle |
 |---|---|
 | Solicitante | Equipo del proyecto |
-| Fecha de solicitud | Entre el 07/10 y el 14/10/2026 (no se registró la fecha exacta) |
+| Fecha de solicitud | 09/10/2026 |
 | Fecha de decisión | 14/10/2026 (Actividad 5) |
 | Descripción | Reemplazar el hosting gratuito (Vercel Hobby) por la arquitectura S3 + CloudFront, API Gateway, Lambda y RDS PostgreSQL |
 | Impacto en alcance | Ninguno (mismas funciones) |
