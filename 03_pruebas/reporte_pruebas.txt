@@ -1,0 +1,44 @@
+▶ PN - Consistencia numérica contra escenarios semilla (desviación permitida: 0 pesos)
+  ✔ PN-S01 Caso del pitch: la cuota supera el margen (1.805ms)
+  ✔ PN-S02 Margen holgado sin obligaciones previas (0.1888ms)
+  ✔ PN-S03 Margen estrecho tras la cuota (0.2873ms)
+  ✔ PN-S04 Frontera: margen simulado exactamente cero (0.1641ms)
+  ✔ PN-S05 Déficit antes y después de la cuota (0.1001ms)
+  ✔ PN-S06 Frontera: periodo sin ingresos (0.096ms)
+  ✔ PN-S07 Varios movimientos por tipo (suma por categoría) (0.1036ms)
+  ✔ PN-S08 Frontera: margen simulado igual al 10 % del ingreso (0.145ms)
+  ✔ PN-S09 Frontera: la cuota supera el margen por un peso (0.1715ms)
+  ✔ PN-S10 Ingresos altos y sin ahorro programado (0.1774ms)
+✔ PN - Consistencia numérica contra escenarios semilla (desviación permitida: 0 pesos) (4.4715ms)
+▶ PF - Reglas funcionales del motor
+  ✔ PF-01 la nueva cuota se descuenta una sola vez (sin doble descuento) (0.2018ms)
+  ✔ PF-02 el análisis no modifica los datos de entrada (0.183ms)
+  ✔ PF-03 suma correctamente varios movimientos del mismo tipo (0.0917ms)
+  ✔ PF-04 el resultado declara la versión de reglas utilizada (0.0942ms)
+  ✔ PF-05 calcula la proporción de ingresos comprometida en obligaciones (0.1237ms)
+  ✔ PF-06 sin ingresos, la proporción no se calcula (evita división por cero) (0.1054ms)
+✔ PF - Reglas funcionales del motor (1.6279ms)
+▶ PV - Validación de entradas
+  ✔ PV-01 rechaza valores negativos (0.4236ms)
+  ✔ PV-02 rechaza valores con decimales (0.0879ms)
+  ✔ PV-03 rechaza tipos de movimiento desconocidos (0.0758ms)
+  ✔ PV-04 rechaza cuota igual a cero (0.099ms)
+  ✔ PV-05 rechaza plazo igual a cero (0.1019ms)
+  ✔ PV-06 rechaza movimientos que no son una lista (0.0777ms)
+  ✔ PV-07 exige la obligación a simular (0.081ms)
+  ✔ PV-08 rechaza valores enviados como texto (0.078ms)
+✔ PV - Validación de entradas (1.2041ms)
+▶ PE - Lenguaje educativo y límites del sistema (RF-07)
+  ✔ PE-01 todo resultado incluye el aviso de estimación educativa (0.228ms)
+  ✔ PE-02 el resultado no contiene campos de aprobación o puntaje crediticio (0.1606ms)
+  ✔ PE-03 cada alerta generada tiene un mensaje educativo definido (0.1825ms)
+  ✔ PE-04 el informe de texto muestra márgenes, alertas y aviso (0.385ms)
+✔ PE - Lenguaje educativo y límites del sistema (RF-07) (1.0692ms)
+ℹ tests 28
+ℹ suites 4
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 119.9409

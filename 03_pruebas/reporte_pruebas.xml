@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testsuite name="PN - Consistencia numérica contra escenarios semilla (desviación permitida: 0 pesos)" time="0.004471" disabled="0" errors="0" tests="10" failures="0" skipped="0" hostname="DESKTOP-517FMG6">
+		<testcase name="PN-S01 Caso del pitch: la cuota supera el margen" time="0.001805" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PN-S02 Margen holgado sin obligaciones previas" time="0.000189" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PN-S03 Margen estrecho tras la cuota" time="0.000287" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PN-S04 Frontera: margen simulado exactamente cero" time="0.000164" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PN-S05 Déficit antes y después de la cuota" time="0.000100" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PN-S06 Frontera: periodo sin ingresos" time="0.000096" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PN-S07 Varios movimientos por tipo (suma por categoría)" time="0.000104" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PN-S08 Frontera: margen simulado igual al 10 % del ingreso" time="0.000145" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PN-S09 Frontera: la cuota supera el margen por un peso" time="0.000172" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PN-S10 Ingresos altos y sin ahorro programado" time="0.000177" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+	</testsuite>
+	<testsuite name="PF - Reglas funcionales del motor" time="0.001628" disabled="0" errors="0" tests="6" failures="0" skipped="0" hostname="DESKTOP-517FMG6">
+		<testcase name="PF-01 la nueva cuota se descuenta una sola vez (sin doble descuento)" time="0.000202" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PF-02 el análisis no modifica los datos de entrada" time="0.000183" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PF-03 suma correctamente varios movimientos del mismo tipo" time="0.000092" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PF-04 el resultado declara la versión de reglas utilizada" time="0.000094" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PF-05 calcula la proporción de ingresos comprometida en obligaciones" time="0.000124" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PF-06 sin ingresos, la proporción no se calcula (evita división por cero)" time="0.000105" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+	</testsuite>
+	<testsuite name="PV - Validación de entradas" time="0.001204" disabled="0" errors="0" tests="8" failures="0" skipped="0" hostname="DESKTOP-517FMG6">
+		<testcase name="PV-01 rechaza valores negativos" time="0.000424" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PV-02 rechaza valores con decimales" time="0.000088" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PV-03 rechaza tipos de movimiento desconocidos" time="0.000076" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PV-04 rechaza cuota igual a cero" time="0.000099" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PV-05 rechaza plazo igual a cero" time="0.000102" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PV-06 rechaza movimientos que no son una lista" time="0.000078" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PV-07 exige la obligación a simular" time="0.000081" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PV-08 rechaza valores enviados como texto" time="0.000078" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+	</testsuite>
+	<testsuite name="PE - Lenguaje educativo y límites del sistema (RF-07)" time="0.001069" disabled="0" errors="0" tests="4" failures="0" skipped="0" hostname="DESKTOP-517FMG6">
+		<testcase name="PE-01 todo resultado incluye el aviso de estimación educativa" time="0.000228" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PE-02 el resultado no contiene campos de aprobación o puntaje crediticio" time="0.000161" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PE-03 cada alerta generada tiene un mensaje educativo definido" time="0.000182" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+		<testcase name="PE-04 el informe de texto muestra márgenes, alertas y aviso" time="0.000385" classname="test" file="C:\Users\Johan\Desktop\Universidad\Actividad6_FinUCompensar\FinUCompensar-evidencias\02_poc_motor\test\motor.test.js"/>
+	</testsuite>
+	<!-- tests 28 -->
+	<!-- suites 4 -->
+	<!-- pass 28 -->
+	<!-- fail 0 -->
+	<!-- cancelled 0 -->
+	<!-- skipped 0 -->
+	<!-- todo 0 -->
+	<!-- duration_ms 119.9409 -->
+</testsuites>

@@ -1,0 +1,124 @@
+{
+  "version": "1.0.0",
+  "nota": "Datos 100 % sintéticos. Los valores 'esperado' se calcularon manualmente y se contrastan con la hoja de control independiente (04_control).",
+  "escenarios": [
+    {
+      "id": "S01",
+      "descripcion": "Caso del pitch: la cuota supera el margen",
+      "movimientos": [
+        { "tipo": "ingreso", "valor": 2000000, "categoria": "Apoyo de sostenimiento" },
+        { "tipo": "gasto", "valor": 1200000, "categoria": "Gastos del hogar" },
+        { "tipo": "obligacion", "valor": 300000, "categoria": "Tarjeta de crédito" },
+        { "tipo": "ahorro", "valor": 200000, "categoria": "Ahorro programado" }
+      ],
+      "obligacionNueva": { "valor": 4000000, "cuota": 350000, "plazoMeses": 18 },
+      "esperado": { "margenActual": 300000, "margenSimulado": -50000, "variacion": -350000, "condicion": "NEGATIVO", "alertas": ["DEFICIT_SIMULADO"] }
+    },
+    {
+      "id": "S02",
+      "descripcion": "Margen holgado sin obligaciones previas",
+      "movimientos": [
+        { "tipo": "ingreso", "valor": 1500000, "categoria": "Apoyo de sostenimiento" },
+        { "tipo": "gasto", "valor": 700000, "categoria": "Gastos del hogar" },
+        { "tipo": "ahorro", "valor": 150000, "categoria": "Ahorro programado" }
+      ],
+      "obligacionNueva": { "valor": 1200000, "cuota": 120000, "plazoMeses": 12 },
+      "esperado": { "margenActual": 650000, "margenSimulado": 530000, "variacion": -120000, "condicion": "POSITIVO_O_CERO", "alertas": ["MARGEN_POSITIVO"] }
+    },
+    {
+      "id": "S03",
+      "descripcion": "Margen estrecho tras la cuota",
+      "movimientos": [
+        { "tipo": "ingreso", "valor": 1300000, "categoria": "Apoyo de sostenimiento" },
+        { "tipo": "gasto", "valor": 900000, "categoria": "Gastos del hogar" },
+        { "tipo": "obligacion", "valor": 100000, "categoria": "Crédito educativo" },
+        { "tipo": "ahorro", "valor": 100000, "categoria": "Ahorro programado" }
+      ],
+      "obligacionNueva": { "valor": 1500000, "cuota": 150000, "plazoMeses": 12 },
+      "esperado": { "margenActual": 200000, "margenSimulado": 50000, "variacion": -150000, "condicion": "POSITIVO_O_CERO", "alertas": ["MARGEN_ESTRECHO"] }
+    },
+    {
+      "id": "S04",
+      "descripcion": "Frontera: margen simulado exactamente cero",
+      "movimientos": [
+        { "tipo": "ingreso", "valor": 1000000, "categoria": "Apoyo de sostenimiento" },
+        { "tipo": "gasto", "valor": 600000, "categoria": "Gastos del hogar" },
+        { "tipo": "obligacion", "valor": 150000, "categoria": "Tarjeta de crédito" },
+        { "tipo": "ahorro", "valor": 50000, "categoria": "Ahorro programado" }
+      ],
+      "obligacionNueva": { "valor": 2400000, "cuota": 200000, "plazoMeses": 12 },
+      "esperado": { "margenActual": 200000, "margenSimulado": 0, "variacion": -200000, "condicion": "POSITIVO_O_CERO", "alertas": ["MARGEN_ESTRECHO"] }
+    },
+    {
+      "id": "S05",
+      "descripcion": "Déficit antes y después de la cuota",
+      "movimientos": [
+        { "tipo": "ingreso", "valor": 900000, "categoria": "Apoyo de sostenimiento" },
+        { "tipo": "gasto", "valor": 850000, "categoria": "Gastos del hogar" },
+        { "tipo": "obligacion", "valor": 120000, "categoria": "Tarjeta de crédito" }
+      ],
+      "obligacionNueva": { "valor": 800000, "cuota": 80000, "plazoMeses": 12 },
+      "esperado": { "margenActual": -70000, "margenSimulado": -150000, "variacion": -80000, "condicion": "NEGATIVO", "alertas": ["DEFICIT_ACTUAL", "DEFICIT_SIMULADO"] }
+    },
+    {
+      "id": "S06",
+      "descripcion": "Frontera: periodo sin ingresos",
+      "movimientos": [
+        { "tipo": "gasto", "valor": 300000, "categoria": "Transporte y alimentación" }
+      ],
+      "obligacionNueva": { "valor": 500000, "cuota": 50000, "plazoMeses": 10 },
+      "esperado": { "margenActual": -300000, "margenSimulado": -350000, "variacion": -50000, "condicion": "NEGATIVO", "alertas": ["SIN_INGRESOS", "DEFICIT_ACTUAL", "DEFICIT_SIMULADO"] }
+    },
+    {
+      "id": "S07",
+      "descripcion": "Varios movimientos por tipo (suma por categoría)",
+      "movimientos": [
+        { "tipo": "ingreso", "valor": 1200000, "categoria": "Apoyo de sostenimiento" },
+        { "tipo": "ingreso", "valor": 300000, "categoria": "Trabajo independiente" },
+        { "tipo": "gasto", "valor": 500000, "categoria": "Arriendo" },
+        { "tipo": "gasto", "valor": 150000, "categoria": "Transporte" },
+        { "tipo": "gasto", "valor": 350000, "categoria": "Alimentación" },
+        { "tipo": "obligacion", "valor": 90000, "categoria": "Tarjeta de crédito" },
+        { "tipo": "obligacion", "valor": 110000, "categoria": "Crédito educativo" },
+        { "tipo": "ahorro", "valor": 100000, "categoria": "Ahorro programado" }
+      ],
+      "obligacionNueva": { "valor": 600000, "cuota": 60000, "plazoMeses": 10 },
+      "esperado": { "margenActual": 200000, "margenSimulado": 140000, "variacion": -60000, "condicion": "POSITIVO_O_CERO", "alertas": ["MARGEN_ESTRECHO"] }
+    },
+    {
+      "id": "S08",
+      "descripcion": "Frontera: margen simulado igual al 10 % del ingreso",
+      "movimientos": [
+        { "tipo": "ingreso", "valor": 2000000, "categoria": "Apoyo de sostenimiento" },
+        { "tipo": "gasto", "valor": 1300000, "categoria": "Gastos del hogar" },
+        { "tipo": "obligacion", "valor": 200000, "categoria": "Crédito de consumo" },
+        { "tipo": "ahorro", "valor": 100000, "categoria": "Ahorro programado" }
+      ],
+      "obligacionNueva": { "valor": 2400000, "cuota": 200000, "plazoMeses": 12 },
+      "esperado": { "margenActual": 400000, "margenSimulado": 200000, "variacion": -200000, "condicion": "POSITIVO_O_CERO", "alertas": ["MARGEN_POSITIVO"] }
+    },
+    {
+      "id": "S09",
+      "descripcion": "Frontera: la cuota supera el margen por un peso",
+      "movimientos": [
+        { "tipo": "ingreso", "valor": 1600000, "categoria": "Apoyo de sostenimiento" },
+        { "tipo": "gasto", "valor": 1000000, "categoria": "Gastos del hogar" },
+        { "tipo": "obligacion", "valor": 250000, "categoria": "Tarjeta de crédito" },
+        { "tipo": "ahorro", "valor": 100000, "categoria": "Ahorro programado" }
+      ],
+      "obligacionNueva": { "valor": 3000012, "cuota": 250001, "plazoMeses": 12 },
+      "esperado": { "margenActual": 250000, "margenSimulado": -1, "variacion": -250001, "condicion": "NEGATIVO", "alertas": ["DEFICIT_SIMULADO"] }
+    },
+    {
+      "id": "S10",
+      "descripcion": "Ingresos altos y sin ahorro programado",
+      "movimientos": [
+        { "tipo": "ingreso", "valor": 4750000, "categoria": "Salario de práctica" },
+        { "tipo": "gasto", "valor": 2310000, "categoria": "Gastos del hogar" },
+        { "tipo": "obligacion", "valor": 980000, "categoria": "Crédito de vehículo" }
+      ],
+      "obligacionNueva": { "valor": 7650000, "cuota": 425000, "plazoMeses": 18 },
+      "esperado": { "margenActual": 1460000, "margenSimulado": 1035000, "variacion": -425000, "condicion": "POSITIVO_O_CERO", "alertas": ["MARGEN_POSITIVO"] }
+    }
+  ]
+}

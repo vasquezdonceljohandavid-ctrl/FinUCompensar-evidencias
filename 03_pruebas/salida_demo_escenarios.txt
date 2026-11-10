@@ -1,0 +1,208 @@
+Evidencia de ejecución - FinUCompensar PoC motor (datos sintéticos)
+Fecha y hora: 2026-11-10 15:44:22 -05:00
+Node.js: v24.14.1 | npm: 11.11.0 | SO: Windows 10.0.26200.0
+Comando: npm run demo -- <archivo> <escenario>
+
+======================================================================
+Escenario S01: Caso del pitch: la cuota supera el margen (datos sint├®ticos)
+
+INFORME COMPARATIVO - FinUCompensar (prueba de concepto)
+Reglas v1.0.0
+
+Ingresos:               $┬á2.000.000
+Gastos:                 $┬á1.200.000
+Obligaciones actuales:  $┬á300.000
+Ahorro programado:      $┬á200.000
+
+Margen actual:          $┬á300.000
+Margen simulado:        -$┬á50.000
+Variaci├│n:              -$┬á350.000
+Obligaciones/ingresos:  15.0 % -> 32.5 %
+
+Alertas educativas:
+  - [DEFICIT_SIMULADO] Con esta cuota, tus egresos superar├¡an tus ingresos.
+
+AVISO: Estimaci├│n educativa basada ├║nicamente en los datos que registraste. No es una aprobaci├│n ni un rechazo de cr├®dito, no consulta centrales de riesgo y no sustituye la asesor├¡a de un profesional.
+======================================================================
+Escenario S02: Margen holgado sin obligaciones previas (datos sint├®ticos)
+
+INFORME COMPARATIVO - FinUCompensar (prueba de concepto)
+Reglas v1.0.0
+
+Ingresos:               $┬á1.500.000
+Gastos:                 $┬á700.000
+Obligaciones actuales:  $┬á0
+Ahorro programado:      $┬á150.000
+
+Margen actual:          $┬á650.000
+Margen simulado:        $┬á530.000
+Variaci├│n:              -$┬á120.000
+Obligaciones/ingresos:  0.0 % -> 8.0 %
+
+Alertas educativas:
+  - [MARGEN_POSITIVO] Con esta cuota conservar├¡as un margen positivo.
+
+AVISO: Estimaci├│n educativa basada ├║nicamente en los datos que registraste. No es una aprobaci├│n ni un rechazo de cr├®dito, no consulta centrales de riesgo y no sustituye la asesor├¡a de un profesional.
+======================================================================
+Escenario S03: Margen estrecho tras la cuota (datos sint├®ticos)
+
+INFORME COMPARATIVO - FinUCompensar (prueba de concepto)
+Reglas v1.0.0
+
+Ingresos:               $┬á1.300.000
+Gastos:                 $┬á900.000
+Obligaciones actuales:  $┬á100.000
+Ahorro programado:      $┬á100.000
+
+Margen actual:          $┬á200.000
+Margen simulado:        $┬á50.000
+Variaci├│n:              -$┬á150.000
+Obligaciones/ingresos:  7.7 % -> 19.2 %
+
+Alertas educativas:
+  - [MARGEN_ESTRECHO] Con esta cuota te quedar├¡a menos del 10 % de tus ingresos como margen.
+
+AVISO: Estimaci├│n educativa basada ├║nicamente en los datos que registraste. No es una aprobaci├│n ni un rechazo de cr├®dito, no consulta centrales de riesgo y no sustituye la asesor├¡a de un profesional.
+======================================================================
+Escenario S04: Frontera: margen simulado exactamente cero (datos sint├®ticos)
+
+INFORME COMPARATIVO - FinUCompensar (prueba de concepto)
+Reglas v1.0.0
+
+Ingresos:               $┬á1.000.000
+Gastos:                 $┬á600.000
+Obligaciones actuales:  $┬á150.000
+Ahorro programado:      $┬á50.000
+
+Margen actual:          $┬á200.000
+Margen simulado:        $┬á0
+Variaci├│n:              -$┬á200.000
+Obligaciones/ingresos:  15.0 % -> 35.0 %
+
+Alertas educativas:
+  - [MARGEN_ESTRECHO] Con esta cuota te quedar├¡a menos del 10 % de tus ingresos como margen.
+
+AVISO: Estimaci├│n educativa basada ├║nicamente en los datos que registraste. No es una aprobaci├│n ni un rechazo de cr├®dito, no consulta centrales de riesgo y no sustituye la asesor├¡a de un profesional.
+======================================================================
+Escenario S05: D├®ficit antes y despu├®s de la cuota (datos sint├®ticos)
+
+INFORME COMPARATIVO - FinUCompensar (prueba de concepto)
+Reglas v1.0.0
+
+Ingresos:               $┬á900.000
+Gastos:                 $┬á850.000
+Obligaciones actuales:  $┬á120.000
+Ahorro programado:      $┬á0
+
+Margen actual:          -$┬á70.000
+Margen simulado:        -$┬á150.000
+Variaci├│n:              -$┬á80.000
+Obligaciones/ingresos:  13.3 % -> 22.2 %
+
+Alertas educativas:
+  - [DEFICIT_ACTUAL] Antes de la nueva cuota, tus egresos ya superan tus ingresos.
+  - [DEFICIT_SIMULADO] Con esta cuota, tus egresos superar├¡an tus ingresos.
+
+AVISO: Estimaci├│n educativa basada ├║nicamente en los datos que registraste. No es una aprobaci├│n ni un rechazo de cr├®dito, no consulta centrales de riesgo y no sustituye la asesor├¡a de un profesional.
+======================================================================
+Escenario S06: Frontera: periodo sin ingresos (datos sint├®ticos)
+
+INFORME COMPARATIVO - FinUCompensar (prueba de concepto)
+Reglas v1.0.0
+
+Ingresos:               $┬á0
+Gastos:                 $┬á300.000
+Obligaciones actuales:  $┬á0
+Ahorro programado:      $┬á0
+
+Margen actual:          -$┬á300.000
+Margen simulado:        -$┬á350.000
+Variaci├│n:              -$┬á50.000
+Obligaciones/ingresos:  no aplica (sin ingresos) -> no aplica (sin ingresos)
+
+Alertas educativas:
+  - [SIN_INGRESOS] No registraste ingresos en este periodo; no es posible estimar un margen disponible.
+  - [DEFICIT_ACTUAL] Antes de la nueva cuota, tus egresos ya superan tus ingresos.
+  - [DEFICIT_SIMULADO] Con esta cuota, tus egresos superar├¡an tus ingresos.
+
+AVISO: Estimaci├│n educativa basada ├║nicamente en los datos que registraste. No es una aprobaci├│n ni un rechazo de cr├®dito, no consulta centrales de riesgo y no sustituye la asesor├¡a de un profesional.
+======================================================================
+Escenario S07: Varios movimientos por tipo (suma por categor├¡a) (datos sint├®ticos)
+
+INFORME COMPARATIVO - FinUCompensar (prueba de concepto)
+Reglas v1.0.0
+
+Ingresos:               $┬á1.500.000
+Gastos:                 $┬á1.000.000
+Obligaciones actuales:  $┬á200.000
+Ahorro programado:      $┬á100.000
+
+Margen actual:          $┬á200.000
+Margen simulado:        $┬á140.000
+Variaci├│n:              -$┬á60.000
+Obligaciones/ingresos:  13.3 % -> 17.3 %
+
+Alertas educativas:
+  - [MARGEN_ESTRECHO] Con esta cuota te quedar├¡a menos del 10 % de tus ingresos como margen.
+
+AVISO: Estimaci├│n educativa basada ├║nicamente en los datos que registraste. No es una aprobaci├│n ni un rechazo de cr├®dito, no consulta centrales de riesgo y no sustituye la asesor├¡a de un profesional.
+======================================================================
+Escenario S08: Frontera: margen simulado igual al 10 % del ingreso (datos sint├®ticos)
+
+INFORME COMPARATIVO - FinUCompensar (prueba de concepto)
+Reglas v1.0.0
+
+Ingresos:               $┬á2.000.000
+Gastos:                 $┬á1.300.000
+Obligaciones actuales:  $┬á200.000
+Ahorro programado:      $┬á100.000
+
+Margen actual:          $┬á400.000
+Margen simulado:        $┬á200.000
+Variaci├│n:              -$┬á200.000
+Obligaciones/ingresos:  10.0 % -> 20.0 %
+
+Alertas educativas:
+  - [MARGEN_POSITIVO] Con esta cuota conservar├¡as un margen positivo.
+
+AVISO: Estimaci├│n educativa basada ├║nicamente en los datos que registraste. No es una aprobaci├│n ni un rechazo de cr├®dito, no consulta centrales de riesgo y no sustituye la asesor├¡a de un profesional.
+======================================================================
+Escenario S09: Frontera: la cuota supera el margen por un peso (datos sint├®ticos)
+
+INFORME COMPARATIVO - FinUCompensar (prueba de concepto)
+Reglas v1.0.0
+
+Ingresos:               $┬á1.600.000
+Gastos:                 $┬á1.000.000
+Obligaciones actuales:  $┬á250.000
+Ahorro programado:      $┬á100.000
+
+Margen actual:          $┬á250.000
+Margen simulado:        -$┬á1
+Variaci├│n:              -$┬á250.001
+Obligaciones/ingresos:  15.6 % -> 31.3 %
+
+Alertas educativas:
+  - [DEFICIT_SIMULADO] Con esta cuota, tus egresos superar├¡an tus ingresos.
+
+AVISO: Estimaci├│n educativa basada ├║nicamente en los datos que registraste. No es una aprobaci├│n ni un rechazo de cr├®dito, no consulta centrales de riesgo y no sustituye la asesor├¡a de un profesional.
+======================================================================
+Escenario S10: Ingresos altos y sin ahorro programado (datos sint├®ticos)
+
+INFORME COMPARATIVO - FinUCompensar (prueba de concepto)
+Reglas v1.0.0
+
+Ingresos:               $┬á4.750.000
+Gastos:                 $┬á2.310.000
+Obligaciones actuales:  $┬á980.000
+Ahorro programado:      $┬á0
+
+Margen actual:          $┬á1.460.000
+Margen simulado:        $┬á1.035.000
+Variaci├│n:              -$┬á425.000
+Obligaciones/ingresos:  20.6 % -> 29.6 %
+
+Alertas educativas:
+  - [MARGEN_POSITIVO] Con esta cuota conservar├¡as un margen positivo.
+
+AVISO: Estimaci├│n educativa basada ├║nicamente en los datos que registraste. No es una aprobaci├│n ni un rechazo de cr├®dito, no consulta centrales de riesgo y no sustituye la asesor├¡a de un profesional.
